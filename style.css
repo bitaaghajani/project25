@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    color: #222;
+    padding-bottom: 50px
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero{
+    background-image: url(/project25/laptop\ desk.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    position: relative;
+    z-index: -2;
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+.hero h1{
+    font-size: 45px;
+    text-transform: capitalize;
+    margin: 20px 0 20px;
+}
+.hero p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.content h3{
+    font-size: 150%;
+    text-transform: capitalize;
+    margin: 20px 0 10px;
+}
+.content p{
+    font-size: 20px;
+    letter-spacing: 1.1px;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    transition: all 0.4s ease-in-out;
+}
+.nav .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.nav a{
+    color: white;
+    padding: 7px 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.4s ease-in-out;
+
+}
+.nav.active{
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 7px 7px 10px #222;
+}
+.nav.active a{
+    color: #222;
+}
+.nav.active .container{
+    padding: 10px 0;
+}
+.nav a.current, .nav a:hover{
+    color: orange;
+}
